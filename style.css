@@ -1,0 +1,33 @@
+
+body {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Josefin Sans', arial, serif;
+    font-size: 1.3em;
+}
+
+#nav {
+    margin: 0 auto 10px;
+    width: 650px;
+    padding: 10px;
+    text-align: center
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#container {
+    margin: 0 auto 30px;
+    width: 820px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    line-height: 100%;
+    font-size: 4em;
+}
+
+#main {
+    padding-top: 0px;
+    text-align: left;
+}
