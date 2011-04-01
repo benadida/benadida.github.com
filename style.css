@@ -31,3 +31,18 @@ h1 {
     padding-top: 0px;
     text-align: left;
 }
+
+h3.highlight {
+  font-size: 18pt;
+  background: #ddd;
+  margin-bottom: 1px;
+  margin-top: 25px;
+  padding: 5px;
+  border-bottom: 1px solid #888;
+}
+
+h4 {
+  line-height: 100%;
+  margin: 1px;
+  display: inline;
+}
