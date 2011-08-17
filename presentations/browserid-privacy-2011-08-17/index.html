@@ -8,8 +8,9 @@
 
 <section>
     <!-- This is the first slide -->
-    <h1>BrowserID<br/>
-    A Privacy Perspective</h1>
+    <br />
+    <div align="center"><img src="browserid.png" /></div>
+    <h1>A Privacy Perspective</h1>
     <br />
     <h5 align="center">Michael Hanson<br />
       Dan Mills<br />
@@ -65,19 +66,33 @@
   <h3 style="font-family: courier;" align="center">johnny@identity.org</h3>
   <br />
   <ul>
-    <li> distributed: domains certify their users</li>
-    <li> addressable: proven need for sites</li>
-    <li> clear for users: intuition for personas</li>
+    <li> distributed &mdash; domains certify their users</li>
+    <li> intuitive &mdash; emails are natural personas</li>
     <li> pseudonyms and self-hosting</li>
-    <li> no lock-in: recover by emailing the user</li>
+    <li> addressable &mdash; proven need for sites</li>
+    <li> no lock-in &mdash; recover by emailing the user</li>
   </ul>
 </section>
 
 <section>
-  <h2>flow</h2>
+<br /><br /><br />
+<h2>Quick Demo</h2>
+</section>
 
+<section>
+  <h2>flow &mdash; certify</h2>
+<br/>
   <div align="center">
-  <img src="flow.png" width="600px" />
+  <img src="flow1.png" width="400px" />
+  </div>
+
+</section>
+
+<section>
+  <h2>flow &mdash; login</h2>
+<br />
+  <div align="center">
+  <img src="flow2.png" width="400px" />
   </div>
 
 </section>
@@ -86,17 +101,12 @@
   <h2>key duration</h2>
 
   <br />
-  <h4>long-term keys</h4>
   <ul>
     <li> device loss/compromise: revocation?</li>
-    <li> binding a user to a key: non-repudiation</li>
-  </ul>
-  <h4>short-term keys</h4>
-  <ul>
-    <li> enough to transfer authority to user</li>
-    <li> enough to keep domain out of login dance</li>
-    <li> short enough to ignore revocation needs</li>
-    <li> short enough to prevent non-repudiation</li>
+    <li> binding a user to a key: non-repudiation?</li>
+    <li> limit chance of information leak</li>
+    <li> just enough to transfer authority to user</li>
+    <li> just enough to keep IdP out of login dance</li>
   </ul>
 </section>
 
@@ -144,12 +154,21 @@
 </section>
 
 <section>
-  <h2>the relying parties<br />
-    don't change</h2>
+  <h2>the RPs
+    stay the same</h2>
 
-  <br /><br />
-  <blockquote style="font-family: Courier; margin-left:30px; border: 2px solid #888; background: lightyellow; padding: 20px; margin-right: 20px;">
+  <br />
+  <blockquote style="font-family: Courier; font-size: 0.9em; margin-left:20px; border: 2px solid #888; background: lightyellow; padding: 15px; margin-right: 20px;">
     navigator.id.getVerifiedEmail(...);
+  </blockquote>
+
+  <br />
+  <h2>the IdPs
+    stay the same</h2>
+
+  <br />
+  <blockquote style="font-family: Courier; font-size: 0.9em; margin-left:20px; border: 2px solid #888; background: lightyellow; padding: 15px; margin-right: 20px;">
+    navigator.id.registerVerifiedEmail(...);
   </blockquote>
   <details>
     scaffolding<br />
@@ -166,7 +185,6 @@
     <li> signatures keep login dance private</li>
     <li> short-term keys reduce problems of loss</li>
     <li> scaffolding for distributed architecture</li>
-    <li> optimizations in short term</li>
   </ul>
 </section>
 
@@ -176,7 +194,10 @@
 <section>
   <h2>Email Pseudonyms</h2>
 
-  img of "pseudonymize this" at BrowserID
+  <br />
+  <div align="center">
+  <img src="pseudonym.png" />
+  </div>
 </section>
 
 
