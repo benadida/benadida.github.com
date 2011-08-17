@@ -21,25 +21,18 @@
 </section>
 
 <section>
-  <h2>what we'll focus on</h2>
-
-  <ul>
-    <li>BrowserID architecture</li>
-    <li>How and Why it's good for privacy</li>
-  </ul>
-
-  <h2>what we'll leave for next time</h2>
-  <ul>
-    <li>awesome developer ergonomics</li>
-    <li>details of the crypto</li>
-  </ul>
+<h2>better web login<br />with strong privacy protection</h2>
+<div align="center">
+<br />
+<img src="screenshot.png" width="400px" />
+</div>
 </section>
 
 <section>
-    <h2>Vision</h2>
+    <h2>vision</h2>
     <br />
     <ul>
-      <li> simple web login</li>
+      <li> simple for users and developers</li>
       <li> strong support for multiple personas</li>
       <li> decentralized, no lock-in</li>
       <li> privacy-protecting</li>
@@ -47,7 +40,7 @@
 </section>
 
 <section>
-  <h2>The Players</h2>
+  <h2>players</h2>
 
   <div align="center">
   <img src="setup.png" width="600px" />
@@ -55,29 +48,33 @@
 </section>
 
 <section>
-  <h2>The Browser's Inevitable Role</h2>
+  <h2>role of the browser</h2>
 
   <div align="center">
   <img src="browser-involvement.png" width="600px" />
   </div>
+  <details>
+    without browser, identity provider involved in login transaction.<br />
+    like a driver's license where, every time you check into a hotel, they call the state to verify.
+  </details>
 </section>
 
 <section>
-  <h2>Email Addresses</h2>
+  <h2>email addresses</h2>
 
-  <h3 style="font: fixed-width;" align="center">johnny@identity.org</h3>
+  <h3 style="font-family: courier;" align="center">johnny@identity.org</h3>
   <br />
   <ul>
     <li> distributed: domains certify their users</li>
-    <li> addressable: proven need</li>
-    <li> existing user intuition for personas</li>
-    <li> easy pseudonymity</li>
+    <li> addressable: proven need for sites</li>
+    <li> clear for users: intuition for personas</li>
+    <li> pseudonyms and self-hosting</li>
     <li> no lock-in: recover by emailing the user</li>
   </ul>
 </section>
 
 <section>
-  <h2>Flow</h2>
+  <h2>flow</h2>
 
   <div align="center">
   <img src="flow.png" width="600px" />
@@ -86,63 +83,90 @@
 </section>
 
 <section>
-  <h2>Long-Term Keys make Johnny Sad</h2>
+  <h2>key duration</h2>
 
   <br />
+  <h4>long-term keys</h4>
   <ul>
     <li> device loss/compromise: revocation?</li>
-    <li> device identification / fingerprinting</li>
-    <li> or worse, force user to carry around a key</li>
-    <li> do we need them? No.</li>
-    <li> no more power than needed.</li>
+    <li> binding a user to a key: non-repudiation</li>
   </ul>
-</section>
-
-
-<section>
-  <h2>Short-Term Signature Keys</h2>
-
+  <h4>short-term keys</h4>
   <ul>
-  </ul>
-</section>
-
-<section>
-  <h2>"Ideal" Architecture</h2>
-
-  <ul>
-  </ul>
-</section>
-
-<section>
-  <h2>Medium-Term Optimization<br />Secondary Authorities</h2>
-
-  <ul>
-  </ul>
-</section>
-
-<section>
-  <h2>Short-Term Optimization<br />JavaScript Implementation</h2>
-
-  <ul>
-  </ul>
-</section>
-
-<section>
-  <h2>Short-Term Optimization<br />Centralized Verifier</h2>
-
-  <ul>
+    <li> enough to transfer authority to user</li>
+    <li> enough to keep domain out of login dance</li>
+    <li> short enough to ignore revocation needs</li>
+    <li> short enough to prevent non-repudiation</li>
   </ul>
 </section>
 
 
 <section>
-  <h2>Summary</h2>
+  <h2>architecture goal</h2>
+
+  <div align="center">
+    <br />
+    <img src="ideal.png" width="600px" />
+  </div>
+</section>
+
+<section>
+  <h2>secondary authorities</h2>
+
+  <div align="center">
+    <br />
+    <img src="secondary.png" width="400px" />
+  </div>
+</section>
+
+<section>
+  <h2>javascript implementation</h2>
+
+  <div align="center">
+    <br />
+    <img src="js.png" height="450px" />
+  </div>
+
+</section>
+
+<section>
+  <h2>verifier service</h2>
+
+  <div align="center">
+    <br />
+    <img src="verifier.png" width="600px" />
+  </div>
+</section>
+
+<section>
+  <br /><br /><br /><br />
+  <h2>so... what's the point?</h2>
+</section>
+
+<section>
+  <h2>the relying parties<br />
+    don't change</h2>
+
+  <br /><br />
+  <blockquote style="font-family: Courier; margin-left:30px; border: 2px solid #888; background: lightyellow; padding: 20px; margin-right: 20px;">
+    navigator.id.getVerifiedEmail(...);
+  </blockquote>
+  <details>
+    scaffolding<br />
+    HDTV rollout: first get the TVs out with the capability, then upgrade programming.
+  </details>
+</section>
+
+<section>
+  <h2>summary</h2>
   <br />
   <ul>
-    <li>email addresses are ideal identifiers</li>
-    <li>designing privacy-protecting architecture</li>
-    <li>some optimizations in short term</li>
-    
+    <li> the browser plays a crucial role</li>
+    <li> email addresses are ideal identifiers</li>
+    <li> signatures keep login dance private</li>
+    <li> short-term keys reduce problems of loss</li>
+    <li> scaffolding for distributed architecture</li>
+    <li> optimizations in short term</li>
   </ul>
 </section>
 
@@ -161,6 +185,8 @@
 
 <!-- Maybe a font from http://www.google.com/webfonts ? -->
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
 <style>
   html { background-color: black; }
@@ -168,15 +194,21 @@
   /* A section is a slide. It's size is 800x600, and this will never change */
   section {
       /* The font from Google */
-      font-family: 'Oswald', arial, serif;
+      font-family: 'Open Sans', arial, serif;
       font-size: 2em;
   }
   h1, h2, h3 {
-      margin-top: 50px;
+      margin-top: 30px;
       text-align: center;
   }
+  h4 {
+  margin-left: 50px;
+  }
   ul {
-      margin-left: 200px;
+      margin-left: 120px;
+  }
+  li {
+      padding-bottom: 10px;
   }
   a { color: #FF0066; } a:hover {text-decoration: underline;}
   footer { position: absolute; bottom: 50px; right: 50px; }
