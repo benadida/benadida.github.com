@@ -3,6 +3,25 @@
 <meta charset="utf-8">
 <title>RDFa - 2011-09-21</title>
 
+<style>
+.code {
+ margin: 40px;
+ padding: 20px 20px 20px 30px;
+ background: #ccc;
+ font-family: courier;
+ white-space: pre;
+ border-left: solid #666 4px;
+ font-size: 0.8em;
+}
+
+.property {
+ color: red;
+}
+
+.target {
+ color: green;
+}
+</style>
 <!-- Your Slides -->
 <!-- One section is one slide -->
 
@@ -23,8 +42,8 @@
 <h2>RDFa Facts</h2>
     <br />
     <ul>
-      <li> started 2004. W3C Recommendation 2008</li>
-      <li> Creative Commons early adopter</li>
+      <li> Creative Commons early adopter 2006</li>
+      <li> W3C Recommendation 2008</li>
       <li> Yahoo! SearchMonkey 2008</li>
       <li> Google Rich Snippets 2009</li>
       <li> Facebook Open Graph Protocol 2010</li>
@@ -34,32 +53,110 @@
 </section>
 
 <section>
-    <h2>Simple Vision: Annotate HTML</h2>
+    <h2>Simple: Annotate HTML</h2>
+    <div class="code">This blog is available under
+&lt;a <span class="property">rel="license"</span>
+   href="<span class="target">http://cc.org/licenses/by/3.0/</span>"&gt;
+  a CC license
+&lt;/a&gt;</div>
+    <div class="code">Please give credit to
+&lt;span <span class="property">property="attributionName"</span>&gt;
+  <span class="target">Manu Sporny</span>
+&lt;/span&gt;</div>
 </section>
 
 <section>
-    <h2>Simple Vision: Annotate HTML</h2>
+    <h2>Multiple Items on a Page</h2>
+    <div class="code">&lt;div <span class="property">typeof="Person"</span>&gt;
+  &lt;span <span class="property">property="name"</span>&gt;
+    <span class="target">Manu Sporny</span>
+  &lt;/span&gt;
+  ...
+&lt;/div&gt;
+
+&lt;div <span class="property">typeof="Person"</span>&gt;
+  &lt;span <span class="property">property="name"</span>&gt;
+    <span class="target">Ivan Herman</span>
+  &lt;/span&gt;
+  ...
+&lt;/div&gt;</div>
+</section>
+
+
+<section>
+    <h2>Vocabularies (Ready to Use)</h2>
+<br />
+<div class="code">&lt;div <span class="property">vocab="http://schema.org/"</span>
+     typeof="<span class="target">Person</span>"&gt;
+  &lt;span property="<span class="target">name</span>"&gt;
+    Manu Sporny
+  &lt;/span&gt;
+  &lt;img rel="<span class="target">image</span>" src="manu.jpg" /&gt;
+&lt;/div&gt;
+</div>
+
 </section>
 
 <section>
-    <h2>Simple Vision: Annotate HTML</h2>
+    <h2>Vocabularies (On the Fly)</h2>
+<br />
+<div class="code">&lt;div vocab="http://schema.org/"
+   <span class="property">prefix="foaf: http://xmlns.com/foaf/0.1/"</span>
+   typeof="Person <span class="target">foaf:Person</span>"&gt;
+  &lt;span property="name <span class="target">foaf:name</span>"&gt;
+    Manu Sporny
+  &lt;/span&gt;
+  &lt;img rel="image" src="manu.jpg" /&gt;
+&lt;/div&gt;
+</div>
+</section>
+
+<section>
+    <h2>Connecting Items</h2>
+<div class="code">&lt;div vocab="http://schema.org/"
+     typeof="Person"&gt;
+  &lt;span property="name"&gt;Manu Sporny&lt;/span&gt;
+  &lt;div <span class="property">rel="address"</span>&gt;
+    &lt;div <span class="property">typeof="PostalAddress"</span>&gt;
+      &lt;span <span class="property">property="streetAddress</span>"&gt;
+       <span class="target">1700 Kraft Drive, Suite 2408</span>
+      &lt;/span&gt;
+      &lt;span property="addressLocality"&gt;
+       <span class="target">Blacksburg</span>
+      &lt;/span&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</div>
 </section>
 
 <section>
   <h2>We Made Mistakes</h2>
+<br />
+<ul>
+<li> xmlns</li>
+<li> explicit vocabularies only</li>
+<li> but, we improved</li>
+<li> RDFa 1.1 is better because of<br />
+Yahoo, Google, Facebook, ...</li>
+</ul>
 </section>
 
 <section>
-  <h2>RDFa 1.1 Lite<br />"Just Enough" Subset</h2>
+  <h2>RDFa is Better for the Web</h2>
+<div class="code">&lt;div <span class="property">vocab="http://schema.org/"</span>
+   <span class="property">prefix="foaf: http://xmlns.com/foaf/0.1/"</span>
+   typeof="Person <span class="target">foaf:Person</span>"&gt;
+  &lt;span property="name <span class="target">foaf:name</span>"&gt;
+    Manu Sporny
+  &lt;/span&gt;
+...
+</div>
+<h4>Anyone can create a vocabulary.</h4>
+<h4>Anyone can remix vocabularies.</h4>
 </section>
 
-<section>
-  <h2>for the Web</h2>
-</section>
-
-<section>
-  <h2>Solid Default Vocabularies</h2>
-</section>
 
 
 
