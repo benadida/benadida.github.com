@@ -39,16 +39,31 @@
 </section>
 
 <section>
-<h2>RDFa Facts</h2>
+<h2>Three Points</h2>
+<br />
+<ol>
+<li> What is RDFa?</li>
+<li> RDFa 1.1 Lite &mdash; a Proposal</li>
+<li> RDFa is Better for the Web</li>
+</ol>
+</section>
+
+<section>
+<h2>An Old Slide (2008)</h2>
+<img src="old-rdfa-slide.png" width="100%" />
+</section>
+
+<section>
+<h2>Basic Facts</h2>
     <br />
     <ul>
-      <li> Creative Commons early adopter 2006</li>
+      <li> Started 2004. Early adopters 2006.</li>
       <li> W3C Recommendation 2008</li>
       <li> Yahoo! SearchMonkey 2008</li>
       <li> Google Rich Snippets 2009</li>
       <li> Facebook Open Graph Protocol 2010</li>
       <li> rNews, GoodRelations, ...</li>
-      <li> Flickr, Overstock, BestBuy, Newsweek, PLoS,...</li>
+      <li> Flickr, Overstock, BestBuy,<br />Newsweek, PLoS,...</li>
     </ul>
 </section>
 
@@ -138,10 +153,32 @@
 <li> xmlns</li>
 <li> explicit vocabularies only</li>
 <li> but, we improved</li>
-<li> RDFa 1.1 is better because of<br />
+<li> RDFa 1.1 has improved thanks to<br />
 Yahoo, Google, Facebook, ...</li>
 </ul>
 </section>
+
+<section>
+  <h2>RDFa 1.1 Lite</h2>
+  <div class="code" style="font-size: 0.6em;">&lt;div <span class="property">vocab="http://schema.org/"</span>
+     <span class="property">typeof="Person"</span>&gt;
+  &lt;span <span class="property">property="name"</span>&gt;<span class="target">Manu Sporny</span>&lt;/span&gt;
+  &lt;img <span class="property">rel="image"</span> src="<span class="target">manu.jpg</span>" /&gt;
+
+  &lt;span <span class="property">property="jobTitle"</span>&gt;<span class="target">CEO</span>&lt;/span&gt;
+
+  &lt;div <span class="property">rel="address"</span>&gt;
+    &lt;span <span class="property">property="streetAddress"</span>&gt;
+     <span class="target">1700 Kraft Drive, Suite 2408</span>
+    &lt;/span&gt;
+    ...
+  &lt;/div&gt;
+
+  &lt;a <span class="property">rel="url"</span>
+     href="<span class="target">http://manu.sporny.org/</span>"&gt;
+       manu.sporny.org
+  &lt;/a&gt;
+&lt;/div&gt;</section>
 
 <section>
   <h2>RDFa is Better for the Web</h2>
@@ -184,7 +221,7 @@ Yahoo, Google, Facebook, ...</li>
   h4 {
   margin-left: 50px;
   }
-  ul {
+  ul, ol {
       margin-left: 120px;
   }
   li {
