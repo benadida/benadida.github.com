@@ -5,7 +5,8 @@ $(document).ready(function() {
   var match = document.location.toString().match("http://ben.adida.net/research/([^/]*)");
   if (match) {
     var new_url = "http://assets.adida.net/research/" + match[1];
-    $('#redirect').html("this page has moved to <a href=\" + new_url + "\">" + new_url + "</a>");
+    $('#redirect').show();
+    $('#newurl').attr('href',new_url).html(new_url);
   }
 });
 </script>
@@ -13,7 +14,8 @@ $(document).ready(function() {
 <h1>Page Not Found
 </h1>
 
-<p id="redirect">
+<p id="redirect" style="display:none;">
+This page has moved to <a id="newurl" href=""></a>
 </p>
 </body>
 </html>
