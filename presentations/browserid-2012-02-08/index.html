@@ -10,7 +10,7 @@
     <!-- This is the first slide -->
     <br />
     <div align="center"><img src="browserid.png" width="80%" /></div>
-    <h1>connect on your terms</h1>
+    <h1>easy, safe, private login<br />for the Web</h1>
     <br />
     <h5 align="center">Ben Adida<br />
       Dan Mills
@@ -19,15 +19,31 @@
 </section>
 
 <section>
+<br /><br /><br />
+<ul>
+<li> what BrowserID does today</li>
+<li> how it works</li>
+<li> where it's going</li>
+</ul>
+</section>
+
+<!--
+<section>
 <h2>easier web login<br />with strong privacy protection</h2>
 <div align="center">
 <br />
 <img src="screenshot.png" width="600px" />
 </div>
 </section>
+-->
 
 <section>
-    <h2>vision</h2>
+<br /><br /><br />
+<h1>Demo!</h1>
+</section>
+
+<section>
+    <h2>product goals</h2>
     <br />
     <ul>
       <li> simple for users and developers</li>
@@ -38,7 +54,11 @@
 </section>
 
 <section>
-    <h2>how it works &mdash; on the client</h2>
+<br /><br /><br /><br /><h1>how it works</h1>
+</section>
+
+<section>
+    <h2>step 1: a bit of JavaScript</h2>
 
 <br />
 <pre>
@@ -56,8 +76,7 @@ navigator.id.get(gotAssertion);
 </section>
 
 <section>
-    <h2>how it works &mdash; on the server</h2>
-
+    <h2>step 2: verify on the server</h2>
 <br />
 <pre>
 $ curl -d "assertion=&lt;ASSERTION&gt;
@@ -71,10 +90,6 @@ $ curl -d "assertion=&lt;ASSERTION&gt;
     "issuer": "browserid.org"
 }
 </pre>
-</section>
-
-<section>
-<h1>Demo!</h1>
 </section>
 
 <section>
@@ -123,7 +138,7 @@ $ curl -d "assertion=&lt;ASSERTION&gt;
 </section>
 
 <section>
-  <h2>flow &mdash; certify</h2>
+  <h2>IdP vouches for user</h2>
 <br/>
   <div align="center">
   <img src="flow1.png" width="400px" />
@@ -132,7 +147,7 @@ $ curl -d "assertion=&lt;ASSERTION&gt;
 </section>
 
 <section>
-  <h2>flow &mdash; login</h2>
+  <h2>User signs into web site</h2>
 <br />
   <div align="center">
   <img src="flow2.png" width="400px" />
@@ -141,13 +156,17 @@ $ curl -d "assertion=&lt;ASSERTION&gt;
 </section>
 
 <section>
-  <h2>key duration</h2>
+  <h2>What the site gets</h2>
+[diagram of cert + assertion]
+</section>
+
+<section>
+  <h2>short-lived certificates</h2>
 
   <br />
   <ul>
     <li> device loss/compromise: revocation?</li>
-    <li> binding a user to a key: non-repudiation?</li>
-    <li> limit chance of information leak</li>
+    <li> binding a user to a key: fingerprinting?</li>
     <li> just enough to transfer authority to user</li>
     <li> just enough to keep IdP out of login dance</li>
   </ul>
@@ -161,6 +180,20 @@ $ curl -d "assertion=&lt;ASSERTION&gt;
     <br />
     <img src="ideal.png" width="700px" />
   </div>
+</section>
+
+<section>
+<h2>but...<br />
+how can we deploy<br />a distributed system<br />
+with so many<br />independent<br/>enhancements?
+</h2>
+</section>
+
+<section>
+<br /><br /><br />
+<h2>we centralize it...
+<br />
+temporarily</h2>
 </section>
 
 <section>
@@ -220,17 +253,46 @@ $ curl -d "assertion=&lt;ASSERTION&gt;
 </section>
 
 <section>
-<h2>Feature - Persistent Login</h2>
+<br /><br /><br />
+<h1>Demo (Again)!</h1>
+</section>
+
+<section>
+<br /><br /><br /><br />
+<h2>where it's going</h2>
+</section>
+
+<section>
+<h2>Persistent Login</h2>
 <br />
 <div align="center"><img src="persistent.png" width="80%" /></div>
 </section>
 
 <section>
-<h2>Feature - Profile Data</h2>
+  <h2>Localization</h2>
+
+  <br />
+  <div align="center">
+  <img src="localization.png" />
+  </div>
 </section>
 
 <section>
-<h2>Feature - Deferred Verification</h2>
+<h2>Profile Data</h2>
+<br />
+<div align="center"><img src="profile.jpg"></div>
+</section>
+
+<section>
+<h2>Deferred Verification</h2>
+<br />
+<div align="center"><img src="verifyemail.png"></div>
+</section>
+
+<section>
+<h2>Deferred Verification</h2>
+<br />
+<div align="center"><img src="deferredemail.png"></div>
 </section>
 
 <section>
@@ -244,6 +306,19 @@ $ curl -d "assertion=&lt;ASSERTION&gt;
 
 
 <section>
+  <h2>state of the BrowserID</h2>
+  <br />
+  <ul>
+    <li> launched as an experiment in July</li>
+    <li> hundreds of web sites using it</li>
+    <li> Mozilla moving web properties to BrowserID</li>
+    <li> no longer an experiment</li>
+    <li> in production env, soon geo-distributed</li>
+  </ul>
+</section>
+
+
+<section>
   <h2>summary</h2>
   <br />
   <ul>
@@ -252,6 +327,7 @@ $ curl -d "assertion=&lt;ASSERTION&gt;
     <li> email addresses are ideal identifiers</li>
     <li> signatures keep login dance private</li>
     <li> scaffolding for distributed architecture</li>
+    <li> BrowserID is a Mozilla Product</li>
   </ul>
 </section>
 
