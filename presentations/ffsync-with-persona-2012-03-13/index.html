@@ -63,7 +63,9 @@ phishing
 
 <section>
 <h2>Firefox Sync</h2>
-diagram of sync between two devices
+<div align="center">
+<img src="sync-v1.png" height="450px" />
+</div>
 </section>
 
 <section>
@@ -124,41 +126,47 @@ Keep improving Sync UX</h2>
 </section>
 
 <section>
-<h2>Option #1<br />Persona authentication</h2>
-<br />
+<h2>#1 &mdash; Persona authentication</h2>
+<div align="center">
+<img src="sync-option-1.png" height="350px" />
+</div>
 <ul>
-<li> use Persona account system</li>
-<li> store data in plaintext</li>
-<li> fulfill the ideal UX</li>
 <li>sync, standalone, backup, recover-by-email</li>
 <li>resists: <strike>server breach</strike>, <strike>phishing</strike></li>
+</ul>
 </section>
 
 <section>
-<h2>Option #2<br />Persona key wrapping</h2>
-<br />
+<h2>#2 &mdash; Persona key wrapping</h2>
+<div align="center">
+<img src="sync-option-2.png" height="350px" />
+</div>
 <ul>
-<li> use the Persona password to encrypt data</li>
-<li> server breach: data is still encrypted</li>
-<li> changing password still works</li>
-<li> no new assumptions of Sync server</li>
 <li>sync, standalone, backup, <strike>recover-by-email</strike></li>
 <li>resists: server breach, <strike>phishing</strike></li>
 </ul>
 </section>
 
 <section>
-<h2>Persona key wrapping</h2>
-<br />
-<img src="keywrapping.png" />
+<h2>#3 &mdash; key wrapping &amp; recovery</h2>
+<div align="center">
+<img src="sync-option-3.png" height="350px" />
+</div>
+<ul>
+<li>sync, standalone, backup, recover-by-email</li>
+<li>resists: server breach, <strike>phishing</strike></li>
+</ul>
 </section>
 
 <section>
-<h2>Option #3<br />Key Wrapping &amp; Recovery</h2>
-</section>
-
-<section>
-<h2>Option #4<br />Selective Key Wrapping</h2>
+<h2>#4 &mdash; selective key wrapping</h2>
+<div align="center">
+<img src="sync-option-4.png" height="350px" />
+</div>
+<ul>
+<li>sync, standalone, backup, recover-by-email (partial)</li>
+<li>resists: server breach (partial), <strike>phishing</strike></li>
+</ul>
 </section>
 
 <section>
