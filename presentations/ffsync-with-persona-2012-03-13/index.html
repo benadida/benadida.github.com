@@ -27,18 +27,8 @@
 </section>
 
 <section>
-    <!-- This is the first slide -->
-    <br />
-    <div align="center"><img src="" width="80%" /></div>
-    <h1>My Firefox Everywhere</h1>
-    <br />
-    <h5 align="center">Ben Adida</h5>
-    <footer>13 March 2012</footer>
-</section>
-
-<section>
 <br /><br /><br /><br />
-<h2>Freedom &amp;<br />User Benefit</h2>
+<h2>User Benefit<br />&amp; Control</h2>
 </section>
 
 <section>
@@ -89,7 +79,7 @@ phishing
 (and maybe not as intended)</h2>
 <br/>
 <ul>
-<li> 0.9% of FF users<br />more than 1/2: single device</li>
+<li> 0.9% of FF users<br />more than 1/2 have just one device</li>
 <li> old device needed to set up new device</li>
 <li> <em>not</em> a backup service, users expect it to be</li>
 <li> "I’d save that and put it on my Dropbox"</li>
@@ -165,6 +155,20 @@ Keep improving Sync UX</h2>
 </section>
 
 <section>
+<h2>wait, how does that work?</h2>
+<div align="center">
+<img src="keywrapping-userkey.png" height="450px" />
+</div>
+</section>
+
+<section>
+<h2>and then the data?</h2>
+<div align="center">
+<img src="keywrapping-sync.png" height="450px" />
+</div>
+</section>
+
+<section>
 <h2>#3 &mdash; key wrapping &amp; recovery</h2>
 <div align="center">
 <img src="sync-option-3.png" height="350px" />
@@ -178,13 +182,13 @@ Keep improving Sync UX</h2>
 <section>
 <h2>#4 &mdash; selective key wrapping</h2>
 <br />
-<h4>Most Data</h4>
+<h4>Most Data: recoverable</h4>
 <ul>
 <li>sync, standalone, backup, recover-by-email</li>
 <li>resists: <strike>server breach</strike>, <strike>phishing</strike></li>
 </ul>
 <br />
-<h4>Highly Sensitive Data (Passwords)</h4>
+<h4>Sensitive Data: key-wrapped</h4>
 <ul>
 <li>sync, standalone, backup, <strike>recover-by-email</strike></li>
 <li>resists: server breach, <strike>phishing</strike></li>
@@ -192,11 +196,13 @@ Keep improving Sync UX</h2>
 </section>
 
 <section>
-<h2>Recommendation:<br />selective key wrapping</h2>
+<h2>Opinion:<br />selective key wrapping</h2>
 <br />
 <ul>
-<li> bookmarks, apps, add-ons are lower value than<br />most Web accounts that are easily phishable</li>
-<li> not sure how to do key recovery<br /></li>
+<li> just sync is not enough</li>
+<li> bookmarks, apps, add-ons lower value than<br />most Web accounts that are easily phishable</li>
+<li> not sure how to do key recovery yet</li>
+<li> clearing web passwords because of<br />Persona reset is good balance</li>
 </ul>
 </section>
 
@@ -205,6 +211,10 @@ Keep improving Sync UX</h2>
   <br />
   <ul>
     <li> user benefit</li>
+    <li> features: sync, standalone, backup, recovery</li>
+    <li> different user data, different threat model</li>
+    <li> no strict security/usability continuum,<br />but some clear tradeoffs</li>
+    <li> are we making our users safer?</li>
   </ul>
 </section>
 
