@@ -9,8 +9,18 @@
 <section>
     <!-- This is the first slide -->
     <br />
-    <div align="center"><img src="" width="80%" /></div>
+    <div align="center"></div>
     <h1>Firefox Sync<br />without the Sync Key</h1>
+    <br />
+    <h5 align="center">Ben Adida</h5>
+    <footer>13 March 2012</footer>
+</section>
+
+<section>
+    <!-- This is the first slide -->
+    <br />
+    <div align="center"></div>
+    <h1>My Firefox Everywhere</h1>
     <br />
     <h5 align="center">Ben Adida</h5>
     <footer>13 March 2012</footer>
@@ -27,6 +37,11 @@
 </section>
 
 <section>
+<br /><br /><br /><br />
+<h2>Freedom &amp;<br />User Benefit</h2>
+</section>
+
+<section>
 <h2>this talk</h2>
 <br />
 <ul>
@@ -39,7 +54,8 @@
 </section>
 
 <section>
-<br /><br /><br />
+<h2>My Firefox</h2>
+<br /><br />
 <div align="center">
 <table border="1" width="90%">
 <tr><th width="50%">Features</th><th>Threats</th></tr>
@@ -62,14 +78,15 @@ phishing
 </section>
 
 <section>
-<h2>Firefox Sync</h2>
+<h2>Currently</h2>
 <div align="center">
 <img src="sync-v1.png" height="450px" />
 </div>
 </section>
 
 <section>
-<h2>Assumption:<br />Firefox Sync is not usable</h2>
+<h2>Our current solution<br />is not being used much<br />
+(and maybe not as intended)</h2>
 <br/>
 <ul>
 <li> 0.9% of FF users<br />more than 1/2: single device</li>
@@ -154,23 +171,33 @@ Keep improving Sync UX</h2>
 </div>
 <ul>
 <li>sync, standalone, backup, recover-by-email</li>
-<li>resists: server breach, <strike>phishing</strike></li>
+<li>resists: (partial) server breach, <strike>phishing</strike></li>
 </ul>
 </section>
 
 <section>
 <h2>#4 &mdash; selective key wrapping</h2>
-<div align="center">
-<img src="sync-option-4.png" height="350px" />
-</div>
+<br />
+<h4>Most Data</h4>
 <ul>
-<li>sync, standalone, backup, recover-by-email (partial)</li>
-<li>resists: server breach (partial), <strike>phishing</strike></li>
+<li>sync, standalone, backup, recover-by-email</li>
+<li>resists: <strike>server breach</strike>, <strike>phishing</strike></li>
+</ul>
+<br />
+<h4>Highly Sensitive Data (Passwords)</h4>
+<ul>
+<li>sync, standalone, backup, <strike>recover-by-email</strike></li>
+<li>resists: server breach, <strike>phishing</strike></li>
 </ul>
 </section>
 
 <section>
-<h2>Recommendation: Selective Key Wrapping</h2>
+<h2>Recommendation:<br />selective key wrapping</h2>
+<br />
+<ul>
+<li> bookmarks, apps, add-ons are lower value than<br />most Web accounts that are easily phishable</li>
+<li> not sure how to do key recovery<br /></li>
+</ul>
 </section>
 
 <section>
