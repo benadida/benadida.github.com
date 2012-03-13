@@ -17,13 +17,48 @@
 </section>
 
 <section>
-<br /><br /><br />
+    <!-- This is the first slide -->
+    <br />
+    <div align="center"><img src="" width="80%" /></div>
+    <h1>My Firefox Everywhere</h1>
+    <br />
+    <h5 align="center">Ben Adida</h5>
+    <footer>13 March 2012</footer>
+</section>
+
+<section>
+<h2>this talk</h2>
+<br />
 <ul>
-<li> assumption</li>
-<li> UX goal</li>
-<li> Persona key wrapping</li>
-<li> need key recovery?</li>
+<li> features and threats</li>
+<li> FF sync</li>
+<li> assumption &amp; UX goal</li>
+<li> Persona Options 1, 2, 3 and 4</li>
+<li> a recommendation</li>
 </ul>
+</section>
+
+<section>
+<br /><br /><br />
+<div align="center">
+<table border="1" width="90%">
+<tr><th width="50%">Features</th><th>Threats</th></tr>
+<tr>
+<td style="padding-left: 10px;" valign="top">
+sync<br />
+standalone<br />
+backup<br />
+recover-by-email<br />
+</td>
+<td style="padding-left: 10px;" valign="top">
+<strike>monetize data</strike><br />
+server breach<br />
+phishing
+</td>
+</tr>
+</table>
+</div>
+
 </section>
 
 <section>
@@ -35,9 +70,9 @@ diagram of sync between two devices
 <h2>Assumption:<br />Firefox Sync is not usable</h2>
 <br/>
 <ul>
-<li> 1.5M ADUs, (0.9%) &mdash; 50+% single device</li>
+<li> 0.9% of FF users<br />more than 1/2: single device</li>
 <li> old device needed to set up new device</li>
-<li> <em>not</em> a backup service</li>
+<li> <em>not</em> a backup service, users expect it to be</li>
 <li> "I’d save that and put it on my Dropbox"</li>
 </ul>
 </section>
@@ -46,7 +81,7 @@ diagram of sync between two devices
 <h2>Alternative UX</h2>
 
 <div style="padding: 20px;" align="center">
-<img width="60%" src="chrome-desktop-signin.png" />
+<img width="80%" src="chrome-desktop-signin.png" />
 </div>
 </section>
 
@@ -67,23 +102,48 @@ diagram of sync between two devices
 </section>
 
 <section>
-<h2>Persona authentication</h2>
+<h2>Options</h2>
+<br />
+<ul style="list-style: none;">
+<li> #0 &mdash; keep improving Sync UX</li>
+<li> #1 &mdash; Persona authentication</li>
+<li> #2 &mdash; Persona key wrapping</li>
+<li> #3 &mdash; Persona key wrapping &amp; recovery</li>
+<li> #4 &mdash; Persona selective key wrapping</li>
+</ul>
+</section>
+
+<section>
+<h2>Option #0<br />
+Keep improving Sync UX</h2>
+<br /><br />
+<ul>
+<li>sync, <strike>standalone</strike>, <strike>backup</strike>, <strike>recover-by-email</strike></li>
+<li>resists: server breach, phishing</li>
+</ul>
+</section>
+
+<section>
+<h2>Option #1<br />Persona authentication</h2>
 <br />
 <ul>
 <li> use Persona account system</li>
 <li> store data in plaintext</li>
 <li> fulfill the ideal UX</li>
-<li> can we do better?</li>
+<li>sync, standalone, backup, recover-by-email</li>
+<li>resists: <strike>server breach</strike>, <strike>phishing</strike></li>
 </section>
 
 <section>
-<h2>Persona key wrapping</h2>
+<h2>Option #2<br />Persona key wrapping</h2>
 <br />
 <ul>
 <li> use the Persona password to encrypt data</li>
 <li> server breach: data is still encrypted</li>
-<li> indirection to allow password changing</li>
+<li> changing password still works</li>
 <li> no new assumptions of Sync server</li>
+<li>sync, standalone, backup, <strike>recover-by-email</strike></li>
+<li>resists: server breach, <strike>phishing</strike></li>
 </ul>
 </section>
 
@@ -94,15 +154,15 @@ diagram of sync between two devices
 </section>
 
 <section>
-<h2>Enough? Backups...</h2>
+<h2>Option #3<br />Key Wrapping &amp; Recovery</h2>
 </section>
 
 <section>
-<h2>Key Recovery</h2>
+<h2>Option #4<br />Selective Key Wrapping</h2>
 </section>
 
 <section>
-<h2>Threats</h2>
+<h2>Recommendation: Selective Key Wrapping</h2>
 </section>
 
 <section>
