@@ -1,0 +1,96 @@
+// Mozilla Sandstone theme, based on:
+// Ribbon theme for Shower HTML presentation engine: github.com/shower/shower
+// Copyright © 2010–2013 Vadim Makeev, pepelsbey.net
+// Licensed under MIT license: github.com/shower/shower/wiki/MIT-License
+
+// Open Sans Weights:
+// 300 Book
+// 400 Normal
+// 600 Semi-Bold
+// 700 Bold
+// 800 Extra-Bold
+
+// Book
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
+	     url('../fonts/OpenSans-Light-webfont.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-LightItalic-webfont.woff') format('woff'),
+	     url('../fonts/OpenSans-LightItalic-webfont.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+// Normal
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+	     url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Italic-webfont.woff') format('woff'),
+	     url('../fonts/OpenSans-Italic-webfont.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+
+// Semi-Bold
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+	     url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-SemiboldItalic-webfont.woff') format('woff'),
+	     url('../fonts/OpenSans-SemiboldItalic-webfont.ttf') format('truetype');
+	font-weight: 600;
+	font-style: italic;
+}
+
+// Bold
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Bold-webfont.woff') format('woff'),
+	     url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-BoldItalic-webfont.woff') format('woff'),
+	     url('../fonts/OpenSans-BoldItalic-webfont.ttf') format('truetype');
+	font-weight: 700;
+	font-style: italic;
+}
+
+// Extra-Bold
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
+	     url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+	     url('../fonts/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype');
+	font-weight: 800;
+	font-style: italic;
+}

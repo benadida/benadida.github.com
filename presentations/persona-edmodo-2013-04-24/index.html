@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Beyond Passwords: Secure Authentication with Mozilla Persona</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <link rel="stylesheet" href="styles/screen.css">
+  <link rel="stylesheet" href="styles/overrides.css">
+  <link rel="stylesheet" href="styles/zocial.css">
+  <link rel="stylesheet" href="styles/persona-buttons.css">
+</head>
+<body class="list debug list-light dark">
+  <!--
+    Debug class on <body> enables
+    cyan grid on slides
+    -->
+  <header class="caption">
+    <h1>Easy &amp; Secure Web Login with Mozilla Persona</h1>
+    <p><a href="http://ben.adida.net">Ben Adida</a></p>
+    <p>slides initially by <a href="http://dancallahan.info">Dan Callahan</a></p>
+  </header>
+
+  <section class="slide cover w h s-title"><div>
+    <!-- http://www.flickr.com/photos/kcolwell/5218707518/ -->
+    <img src="pictures/keys.jpg" alt="">
+    <h2>Easy &amp; Secure Web Login</h2>
+    <h3>with Mozilla Persona</h3>
+    <h4>Ben Adida <br /> @benadida &middot; ben.adida.net<br />slides initially by Dan Callahan</h4>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>Persona is...</h2>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>... an easy &amp; secure login system without lockin.</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Persona on your site means...</h2>
+    <ul>
+      <li class="next">no entering/storing passwords</li>
+      <li class="next">works on all browsers</li>
+      <li class="next">works for all users</li>
+      <li class="next">clear user experience</li>
+    </ul>
+  </div></section>
+
+  <section class="slide shout blue"><div>
+    <h2>Words Boring. Demos Fun.</h2>
+  </div></section>
+
+  <section class="slide cover s-screencast"><div>
+    <video controls>
+      <source src="videos/PyCon-Intro.ogv" type="video/ogg">
+    </video>
+  </div></section>
+
+  <section class="slide"><div>
+      <br /><br />
+    <ol>
+      <li>The Story</li>
+      <li>The Protocol</li>
+      <li>Implementing Persona</li>
+    </ol>
+  </div></section>
+
+  <section class="slide shout blue"><div>
+    <h2>The Story of Persona</h2>
+  </div></section>
+
+  <!--
+    1. The Internet is an integral part of modern life–a key component in education, communication, collaboration, business, entertainment and society as a whole.
+    2. The Internet is a global public resource that must remain open and accessible.
+    3, The Internet should enrich the lives of individual human beings.
+    4, Individuals' security on the Internet is fundamental and cannot be treated as optional.
+    5, Individuals must have the ability to shape their own experiences on the Internet.
+    6, The effectiveness of the Internet as a public resource depends upon interoperability (protocols, data formats, content), innovation and decentralized participation worldwide.
+    7, Free and open source software promotes the development of the Internet as a public resource.
+    8, Transparent community-based processes promote participation, accountability, and trust.
+    9, Commercial involvement in the development of the Internet brings many benefits; a balance between commercial goals and public benefit is critical.
+    10, Magnifying the public benefit aspects of the Internet is an important goal, worthy of time, attention and commitment.
+  -->
+
+  <section class="slide shout"><div>
+    <h2>The Mozilla Manifesto</h2>
+  </div></section>
+
+  <section class="slide s-manifesto"><div>
+    <h2>The Mozilla Manifesto</h2>
+    <ol>
+      <li class="next">The Internet is a global public resource that must remain <b>open and accessible</b>.</li>
+      <li class="next">Individuals must have the ability to <b>shape their own experiences</b> on the Internet.</li>
+    </ol>
+  </div></section>
+
+<!--  <section class="slide cover h w"><div>
+    <img src="pictures/prodigy_login_large.jpg" />
+  </div></section>
+
+  <section class="slide cover"><div>
+    <img src="pictures/PyCon2013Login.png" />
+  </div></section>
+-->
+
+  <section class="slide shout s-pretribble"><div>
+    <ul>
+      <li class="next"><button class="zocial googleplus">Sign in with Google</button></li>
+      <li class="next"><button class="zocial facebook">Sign in with Facebook</button></li>
+      <li class="next"><button class="zocial twitter">Sign in with Twitter</button></li>
+      <li class="next"><button class="zocial yahoo">Sign in with Yahoo</button></li>
+      <li class="next"><button class="zocial windows">Sign in with Windows Live</button></li>
+      <li class="next"><button class="zocial github">Sign in with GitHub</button></li>
+      <li class="next"><button class="zocial linkedin">Sign in with LinkedIn</button></li>
+      <li class="next"><button class="zocial steam">Sign in with Steam</button></li>
+    </ul>
+    <ul>
+      <li class="next"><button class="zocial myspace">MySpace</button></li>
+      <li class="next"><button class="zocial vk">ВКонтакте</button></li>
+      <li class="next"><button class="zocial weibo">新浪微博</button></li>
+    </ul>
+    <ul>
+      <li class="next"><button class="zocial openid">Good luck with OpenID</button></li>
+    </ul>
+  </div></section>
+
+  <section class="slide cover w"><div>
+    <img src="pictures/tribbles.jpg" />
+  </div></section>
+
+  <section class="slide cover"><div>
+    <img src="pictures/500px.png">
+  </div></section>
+
+  <section class="slide cover"><div>
+    <img src="pictures/klout.png">
+  </div></section>
+
+<!--  <section class="slide shout s-pretribble"><div>
+    <ul>
+      <li><button class="zocial googleplus">Sign in with Google</button></li>
+      <li><button class="zocial facebook">Sign in with Facebook</button></li>
+      <li><button class="zocial twitter">Sign in with Twitter</button></li>
+      <li><button class="zocial yahoo">Sign in with Yahoo</button></li>
+      <li><button class="zocial windows">Sign in with Windows Live</button></li>
+      <li><button class="zocial github">Sign in with GitHub</button></li>
+      <li><button class="zocial linkedin">Sign in with LinkedIn</button></li>
+      <li><button class="zocial steam">Sign in with Steam</button></li>
+    </ul>
+    <ul>
+      <li><button class="zocial myspace">MySpace</button></li>
+      <li><button class="zocial vk">ВКонтакте</button></li>
+      <li><button class="zocial weibo">新浪微博</button></li>
+    </ul>
+    <ul>
+      <li><button class="zocial openid">Good luck with OpenID</button></li>
+    </ul>
+  </div></section> -->
+
+  <section class="slide cover h"><div>
+    <img src="pictures/googleban.png">
+  </div></section>
+
+<!--  <section class="slide shout s-pretribble"><div>
+    <ul>
+      <li><button class="zocial googleplus">Sign in with Google</button></li>
+      <li><button class="zocial facebook">Sign in with Facebook</button></li>
+      <li><button class="zocial twitter">Sign in with Twitter</button></li>
+      <li><button class="zocial yahoo">Sign in with Yahoo</button></li>
+      <li><button class="zocial windows">Sign in with Windows Live</button></li>
+      <li><button class="zocial github">Sign in with GitHub</button></li>
+      <li><button class="zocial linkedin">Sign in with LinkedIn</button></li>
+      <li><button class="zocial steam">Sign in with Steam</button></li>
+    </ul>
+    <ul>
+      <li><button class="zocial myspace">MySpace</button></li>
+      <li><button class="zocial vk">ВКонтакте</button></li>
+      <li><button class="zocial weibo">新浪微博</button></li>
+    </ul>
+    <ul>
+      <li><button class="zocial openid">Good luck with OpenID</button></li>
+    </ul>
+  </div></section>-->
+
+  <section class="slide shout s-onebutton mozilla"><div>
+    <h3 class="place m">One button.<br /><br />Any email address.</h3>
+    <span class="place m persona-button dark"><span>Sign in with Persona</span></span>
+  </div></section>
+
+  <section class="slide shout blue"><div>
+    <h2>The Persona Protocol</h2>
+  </div></section>
+
+  <section class="slide cover s-screencast"><div>
+    <video controls>
+      <source src="videos/PyCon-NewUserFlow.ogv" type="video/ogg">
+    </video>
+  </div></section>
+
+  <section class="slide cover w"><div>
+    <img src="pictures/idp-0.png" />
+  </div></section>
+
+  <section class="slide cover w"><div>
+    <img src="pictures/idp-1.png" />
+  </div></section>
+
+  <section class="slide cover w"><div>
+    <img src="pictures/idp-2.png" />
+  </div></section>
+
+  <section class="slide cover w"><div>
+    <img src="pictures/idp-3.png" />
+  </div></section>
+
+  <section class="slide cover w"><div>
+    <img src="pictures/idp-4.png" />
+  </div></section>
+
+  <section class="slide cover w"><div>
+    <img src="pictures/idp-full.png" />
+  </div></section>
+
+  <section class="slide cover w"><div>
+    <img src="pictures/flow-0011.png" />
+  </div></section>
+
+  <section class="slide cover w"><div>
+    <img src="pictures/flow-1100.png" />
+  </div></section>
+
+  <section class="slide shout blue"><div>
+    <h2>Implementing Persona</h2>
+  </div></section>
+
+  <section class="slide shout mozilla s-rtfm"><div>
+    <h2>RTFM</h2>
+    <h3>developer.mozilla.org/persona</h3>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Four Steps</h2>
+    <ol>
+      <li class="next">JavaScript library</li>
+      <li class="next">Login / logout buttons</li>
+      <li class="next">Configure Persona</li>
+      <li class="next">Verify assertions</li>
+    </ol>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>1. JavaScript Library</h2>
+    <pre class="place m">
+      <code>&lt;script src="<mark>https://login.persona.org/include.js</mark>"&gt;&lt;/script&gt;</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>2. Login / logout buttons</h2>
+    <pre class="place m">
+      <code>$(<mark class="string">'#loginBtn'</mark>).click( function () { <mark>navigator.id.request()</mark> } );
+$(<mark class="string">'#logoutBtn'</mark>).click( function () { <mark>navigator.id.logout()</mark> } );</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code><mark>navigator.id.watch</mark>({
+
+
+                                                               &nbsp;
+
+
+
+
+
+
+
+
+
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  <mark>loggedInUser</mark>: ...,
+  <mark>onlogin</mark>: function (assertion) {
+                                                               &nbsp;
+
+
+
+  },
+  <mark>onlogout</mark>: function () {
+
+
+
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  loggedInUser: <mark class="important">"alice@example.com"</mark>,
+  onlogin: function (assertion) {
+                                                               &nbsp;
+
+
+
+  },
+  onlogout: function () {
+
+
+
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  loggedInUser: <mark class="important">"bob@foobar.test"</mark>,
+  onlogin: function (assertion) {
+                                                               &nbsp;
+
+
+
+  },
+  onlogout: function () {
+
+
+
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  loggedInUser: <mark class="important">null</mark>,
+  onlogin: function (assertion) {
+                                                               &nbsp;
+
+
+
+  },
+  onlogout: function () {
+
+
+
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  loggedInUser: <mark class="string">null</mark>,
+  onlogin: function (assertion) {
+    <mark class="comment">// A user wants to log in! Send the assertion to my backend.</mark>
+
+
+
+  },
+  onlogout: function () {
+
+
+
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  loggedInUser: <mark class="string">null</mark>,
+  onlogin: function (<mark>assertion</mark>) {
+    <mark class="comment">// A user wants to log in! Send the assertion to my backend.</mark>
+    $.post(<mark class="string">"/login"</mark>, {<mark class="string">"assertion"</mark>: <mark>assertion</mark>})
+
+
+  },
+  onlogout: function () {
+
+
+
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  loggedInUser: <mark class="string">null</mark>,
+  onlogin: function (assertion) {
+    <mark class="comment">// A user wants to log in! Send the assertion to my backend.</mark>
+    $.post(<mark class="string">"/login"</mark>, {<mark class="string">"assertion"</mark>: assertion})
+    .done(function () { <mark>window.location.reload()</mark> })
+
+  },
+  onlogout: function () {
+
+
+
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  loggedInUser: <mark class="string">null</mark>,
+  onlogin: function (assertion) {
+    <mark class="comment">// A user wants to log in! Send the assertion to my backend.</mark>
+    $.post(<mark class="string">"/login"</mark>, {<mark class="string">"assertion"</mark>: assertion})
+    .done(function () { window.location.reload() })
+    .fail(function () { <mark>navigator.id.logout()</mark> });
+  },
+  onlogout: function () {
+
+
+
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  loggedInUser: <mark class="string">null</mark>,
+  onlogin: function (assertion) {
+    <mark class="comment">// A user wants to log in! Send the assertion to my backend.</mark>
+    $.post(<mark class="string">"/login"</mark>, {<mark class="string">"assertion"</mark>: assertion})
+    .done(function () { window.location.reload() })
+    .fail(function () { navigator.id.logout() });
+  },
+  onlogout: function () {
+    <mark class="comment">// A user has logged out! Tear down their session.</mark>
+
+
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  loggedInUser: <mark class="string">null</mark>,
+  onlogin: function (assertion) {
+    <mark class="comment">// A user wants to log in! Send the assertion to my backend.</mark>
+    $.post(<mark class="string">"/login"</mark>, {<mark class="string">"assertion"</mark>: assertion})
+    .done(function () { window.location.reload() })
+    .fail(function () { navigator.id.logout() });
+  },
+  onlogout: function () {
+    <mark class="comment">// A user has logged out! Tear down their session.</mark>
+    $.post(<mark class="string">"/logout"</mark>)
+
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  loggedInUser: <mark class="string">null</mark>,
+  onlogin: function (assertion) {
+    <mark class="comment">// A user wants to log in! Send the assertion to my backend.</mark>
+    $.post(<mark class="string">"/login"</mark>, {<mark class="string">"assertion"</mark>: assertion})
+    .done(function () { window.location.reload() })
+    .fail(function () { navigator.id.logout() });
+  },
+  onlogout: function () {
+    <mark class="comment">// A user has logged out! Tear down their session.</mark>
+    $.post(<mark class="string">"/logout"</mark>)
+    .always(function () { <mark>window.location.reload()</mark> });
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>3. Configure Persona</h2>
+    <pre class="place m">
+      <code>navigator.id.watch({
+  loggedInUser: <mark class="string">null</mark>,
+  onlogin: function (assertion) {
+    <mark class="comment">// A user wants to log in! Send the assertion to my backend.</mark>
+    $.post("<mark class="important">/login</mark>", {<mark class="string">"assertion"</mark>: assertion})
+    .done(function () { window.location.reload() })
+    .fail(function () { navigator.id.logout() });
+  },
+  onlogout: function () {
+    <mark class="comment">// A user has logged out! Tear down their session.</mark>
+    $.post("<mark class="important">/logout</mark>")
+    .always(function () { window.location.reload() });
+  }
+});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <pre class="place m">
+      <code>@app.route("<mark class="important">/logout</mark>", methods=[<mark class="string">"POST"</mark>])
+def logout():
+    <mark>session.clear()</mark>
+    return Response(status=<mark class="string">204</mark>)
+    </code></pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>4. Verify assertions</h2>
+    <pre class="place m">
+      <code>@app.route("<mark class="important">/login</mark>", methods=[<mark class="string">"POST"</mark>])
+def login():
+
+
+                                                           &nbsp;
+
+
+
+
+
+
+
+
+    </code></pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>4. Verify assertions</h2>
+    <pre class="place m">
+      <code>@app.route("<mark class="important">/login</mark>", methods=[<mark class="string">"POST"</mark>])
+def login():
+    <mark class="comment"># Send the assertion to Mozilla's verifier service</mark>
+
+                                                           &nbsp;
+
+
+
+
+
+
+
+
+    </code></pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>4. Verify assertions</h2>
+    <pre class="place m">
+      <code>@app.route("<mark class="important">/login</mark>", methods=[<mark class="string">"POST"</mark>])
+def login():
+    <mark class="comment"># Send the assertion to Mozilla's verifier service</mark>
+    data = {<mark class="string">"assertion"</mark>: request.form[<mark class="string">"assertion"</mark>],
+            <mark class="string">"audience"</mark>: <mark class="string">"https://example.com:443"</mark>}
+                                                           &nbsp;
+
+
+
+
+
+
+
+    </code></pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>4. Verify assertions</h2>
+    <pre class="place m">
+      <code>@app.route("<mark class="important">/login</mark>", methods=[<mark class="string">"POST"</mark>])
+def login():
+    <mark class="comment"># Send the assertion to Mozilla's verifier service</mark>
+    data = {<mark class="string">"assertion"</mark>: request.form[<mark class="string">"assertion"</mark>],
+            <mark class="string">"audience"</mark>: <mark class="string">"https://example.com:443"</mark>}
+    resp = post(<mark class="string">"https://verifier.login.persona.org/verify"</mark>,
+                data=data)
+
+
+
+
+
+
+    </code></pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>4. Verify assertions</h2>
+    <pre class="place m">
+      <code>@app.route("<mark class="important">/login</mark>", methods=[<mark class="string">"POST"</mark>])
+def login():
+    <mark class="comment"># Send the assertion to Mozilla's verifier service</mark>
+    data = {<mark class="string">"assertion"</mark>: request.form[<mark class="string">"assertion"</mark>],
+            <mark class="string">"audience"</mark>: <mark class="string">"https://example.com:443"</mark>}
+    resp = post(<mark class="string">"https://verifier.login.persona.org/verify"</mark>,
+                data=data)
+    info = resp.json()
+
+
+
+
+
+    </code></pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <pre class="place m">
+      <code>{
+  <mark>"status"</mark>: <mark class="important">"okay"</mark>,
+  <mark>"email"</mark>: <mark class="important">"bob@foobar.test"</mark>,
+  <mark class="string">"audience"</mark>: <mark class="string">"https://example.com:443"</mark>,
+  <mark class="string">"expires"</mark>: 1308859352261,
+  <mark class="string">"issuer"</mark>: <mark class="string">"foobar.test"</mark>
+}</code></pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>4. Verify assertions</h2>
+    <pre class="place m">
+      <code>@app.route("<mark class="important">/login</mark>", methods=[<mark class="string">"POST"</mark>])
+def login():
+    <mark class="comment"># Send the assertion to Mozilla's verifier service</mark>
+    data = {<mark class="string">"assertion"</mark>: request.form[<mark class="string">"assertion"</mark>],
+            <mark class="string">"audience"</mark>: <mark class="string">"https://example.com:443"</mark>}
+    resp = post(<mark class="string">"https://verifier.login.persona.org/verify"</mark>,
+                data=data)
+    info = resp.json()
+
+
+
+
+
+    </code></pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>4. Verify assertions</h2>
+    <pre class="place m">
+      <code>@app.route("<mark class="important">/login</mark>", methods=[<mark class="string">"POST"</mark>])
+def login():
+    <mark class="comment"># Send the assertion to Mozilla's verifier service</mark>
+    data = {<mark class="string">"assertion"</mark>: request.form[<mark class="string">"assertion"</mark>],
+            <mark class="string">"audience"</mark>: <mark class="string">"https://example.com:443"</mark>}
+    resp = post(<mark class="string">"https://verifier.login.persona.org/verify"</mark>,
+                data=data)
+    info = resp.json()
+
+    if info[<mark class="string">"status"</mark>] != <mark class="string">"okay"</mark>:
+      abort(403)
+
+
+    </code></pre>
+  </div></section>
+
+  <section class="slide s-watch"><div>
+    <h2>4. Verify assertions</h2>
+    <pre class="place m">
+      <code>@app.route("<mark class="important">/login</mark>", methods=[<mark class="string">"POST"</mark>])
+def login():
+    <mark class="comment"># Send the assertion to Mozilla's verifier service</mark>
+    data = {<mark class="string">"assertion"</mark>: request.form[<mark class="string">"assertion"</mark>],
+            <mark class="string">"audience"</mark>: <mark class="string">"https://example.com:443"</mark>}
+    resp = post(<mark class="string">"https://verifier.login.persona.org/verify"</mark>,
+                data=data)
+    info = resp.json()
+
+    if info[<mark class="string">"status"</mark>] != <mark class="string">"okay"</mark>:
+      abort(403)
+
+    session[<mark class="string">"email"</mark>] = info[<mark class="string">"email"</mark>]
+    return Response(status=<mark class="string">204</mark>)</code></pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Implementing Persona</h2>
+    <ol>
+      <li>Thirty lines of code.</li>
+      <li>One afternoon.</li>
+    </ol>
+  </div></section>
+
+  <section class="slide cover w s-live-code"><div>
+    <!-- https://www.flickr.com/photos/brent_nashville/4449955864/ -->
+    <!-- https://www.flickr.com/photos/pennstatelive/4946308774/ -->
+    <!-- https://www.flickr.com/photos/bbcbob/468258201/ -->
+    <!-- https://www.flickr.com/photos/stankus/8379303335/ -->
+    <img src="pictures/8379303335_3bcc2e9eb6_o.jpg" alt="" />
+    <h2>Warning: Live Coding</h2>
+  </div></section>
+
+  <section class="slide shout blue"><div>
+    <h2>Three Tips</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Three Tips</h2>
+    <ol>
+      <li class="next">Use (or make!) a library</li>
+      <li class="next"><code>pip install requests</code></li>
+      <li class="next">Combine Sign Up and Sign In</li>
+    </ol>
+  </div></section>
+
+  <section class="slide cover s-screencast"><div>
+    <video controls>
+      <source src="videos/PyCon-Voost.ogv" type="video/ogg">
+    </video>
+  </div></section>
+
+  <section class="slide cover"><div>
+    <img src="pictures/PyCon2013Signup.png" />
+  </div></section>
+
+  <section class="slide cover"><div>
+    <img src="pictures/PyCon2013SignupPersona.png" />
+  </div></section>
+
+  <section class="slide shout blue"><div>
+    <h2>Small Request</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Small Request</h2>
+    <ul>
+      <li class="next">Spend <b>one hour</b> with Persona.</li>
+      <li class="next"><b>Tell me</b> about your experience.</li>
+      <li class="next">Ask <b>one site</b> to support Persona.</li>
+    </ul>
+  </div></section>
+
+  <section class="slide shout s-questions"><div>
+    <h2>Questions?</h2>
+    <h3>developer.mozilla.org/persona</h3>
+    <h4>dcallahan@mozilla.com &middot; @callahad &middot; dancallahan.info</h4>
+  </div></section>
+
+  <section class="slide s-credits"><div>
+    <h2>Creative Commons Photos By...</h2>
+    <ul>
+      <li>flickr.com/photos/<b>kcolwell</b>/5218707518</li>
+      <li>flickr.com/photos/<b>stankus</b>/8379303335</li>
+    </ul>
+  </div></section>
+  <script src="shower.js"></script>
+  <!-- Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>

@@ -1,0 +1,378 @@
+/* Fonts */
+body {
+  /* font:25px/2 'PT Sans', sans-serif; */
+  font-family: 'Open Sans'; }
+
+.caption {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 32px;
+  letter-spacing: -1px;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75); }
+  .caption a {
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+    color: #0095DD; }
+    .caption a:hover {
+      color: #00539F;
+      text-decoration: underline; }
+  .caption h1 {
+    /* font:bold 50px/1 'PT Sans Narrow', sans-serif; */
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-size: 48px;
+    letter-spacing: -2px; }
+
+.slide {
+  /* font:bold 50px/1 'PT Sans Narrow', sans-serif; */
+  font-family: 'Open Sans'; }
+  .slide h2 {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-size: 48px;
+    letter-spacing: -2px;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75); }
+  .slide:after {
+    display: none; }
+  .slide pre code {
+    line-height: 150%; }
+  .slide kbd, .slide code, .slide samp {
+    font-family: monospace; }
+  .slide blockquote:before {
+    /* font:200px/1 'PT Sans', sans-serif; */
+    font-family: "Open Sans"; }
+  .slide a {
+    border-bottom: none;
+    color: #0095DD; }
+    .slide a:hover {
+      color: #00539F;
+      text-decoration: underline; }
+
+/* Backgrounds */
+@media screen {
+  .list {
+    position: static;
+    background: url(../images/grain.png), linear-gradient(to bottom, #d7d3c8, #f6f4ec 400px), #f6f4ec; }
+    .list.list-mozilla {
+      background: url(../images/grain.png), linear-gradient(to bottom, #d8d3c8, #f6f4ec 400px), #f6f4ec; }
+    .list.list-firefox {
+      background: url(../images/grain.png), linear-gradient(to bottom, #cae1f4, #eeeeee 400px), #eeeeee; }
+    .list.list-dark {
+      background: url(../images/grain.png), linear-gradient(to bottom, #424f5a, #6a7b86 400px), #6a7b86; }
+    .list.list-light {
+      background: url(../images/grain.png), linear-gradient(to bottom, #d4dde4, #eaeff2 400px), #eaeff2; }
+    .list.list-aurora {
+      background: url(../images/grain.png), linear-gradient(to bottom, #331e54, black 400px), black; }
+    .list.list-nightly {
+      background: url(../images/grain.png), linear-gradient(to bottom, #002147, black 400px), black; } }
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    .list {
+      background: url(../images/grain.png), linear-gradient(to bottom, #d7d3c8, #f6f4ec 400px), #f6f4ec; } }
+    @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+      .list.list-mozilla {
+        background: url(../images/grain.png), linear-gradient(to bottom, #d8d3c8, #f6f4ec 400px), #f6f4ec; } }
+    @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+      .list.list-firefox {
+        background: url(../images/grain.png), linear-gradient(to bottom, #cae1f4, #eeeeee 400px), #eeeeee; } }
+    @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+      .list.list-dark {
+        background: url(../images/grain.png), linear-gradient(to bottom, #424f5a, #6a7b86 400px), #6a7b86; } }
+    @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+      .list.list-light {
+        background: url(../images/grain.png), linear-gradient(to bottom, #d4dde4, #eaeff2 400px), #eaeff2; } }
+    @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+      .list.list-aurora {
+        background: url(../images/grain.png), linear-gradient(to bottom, #331e54, black 400px), black; } }
+    @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+      .list.list-nightly {
+        background: url(../images/grain.png), linear-gradient(to bottom, #002147, black 400px), black; } }
+
+.slide, .debug .slide, .slide.mozilla, .debug .slide.mozilla,
+.red .slide.mozilla, .red.debug .slide.mozilla,
+.dark .slide.mozilla, .dark.debug .slide.mozilla,
+.blue .slide.mozilla, .blue.debug .slide.mozilla {
+  background: url(../images/tab.png) 835px 0 no-repeat, url(../images/grain.png) 0 0 repeat, radial-gradient(circle, #f6f4ec, #d7d3c8), #f6f4ec; }
+  .slide, .slide h2, .slide kbd, .slide code, .slide samp, .debug .slide, .debug .slide h2, .debug .slide kbd, .debug .slide code, .debug .slide samp, .slide.mozilla, .slide.mozilla h2, .slide.mozilla kbd, .slide.mozilla code, .slide.mozilla samp, .debug .slide.mozilla, .debug .slide.mozilla h2, .debug .slide.mozilla kbd, .debug .slide.mozilla code, .debug .slide.mozilla samp,
+  .red .slide.mozilla,
+  .red .slide.mozilla h2,
+  .red .slide.mozilla kbd,
+  .red .slide.mozilla code,
+  .red .slide.mozilla samp, .red.debug .slide.mozilla, .red.debug .slide.mozilla h2, .red.debug .slide.mozilla kbd, .red.debug .slide.mozilla code, .red.debug .slide.mozilla samp,
+  .dark .slide.mozilla,
+  .dark .slide.mozilla h2,
+  .dark .slide.mozilla kbd,
+  .dark .slide.mozilla code,
+  .dark .slide.mozilla samp, .dark.debug .slide.mozilla, .dark.debug .slide.mozilla h2, .dark.debug .slide.mozilla kbd, .dark.debug .slide.mozilla code, .dark.debug .slide.mozilla samp,
+  .blue .slide.mozilla,
+  .blue .slide.mozilla h2,
+  .blue .slide.mozilla kbd,
+  .blue .slide.mozilla code,
+  .blue .slide.mozilla samp, .blue.debug .slide.mozilla, .blue.debug .slide.mozilla h2, .blue.debug .slide.mozilla kbd, .blue.debug .slide.mozilla code, .blue.debug .slide.mozilla samp {
+    color: #000;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75); }
+  .slide mark, .debug .slide mark, .slide.mozilla mark, .debug .slide.mozilla mark,
+  .red .slide.mozilla mark, .red.debug .slide.mozilla mark,
+  .dark .slide.mozilla mark, .dark.debug .slide.mozilla mark,
+  .blue .slide.mozilla mark, .blue.debug .slide.mozilla mark {
+    text-shadow: none; }
+    .slide mark.important, .slide mark.comment, .debug .slide mark.important, .debug .slide mark.comment, .slide.mozilla mark.important, .slide.mozilla mark.comment, .debug .slide.mozilla mark.important, .debug .slide.mozilla mark.comment,
+    .red .slide.mozilla mark.important,
+    .red .slide.mozilla mark.comment, .red.debug .slide.mozilla mark.important, .red.debug .slide.mozilla mark.comment,
+    .dark .slide.mozilla mark.important,
+    .dark .slide.mozilla mark.comment, .dark.debug .slide.mozilla mark.important, .dark.debug .slide.mozilla mark.comment,
+    .blue .slide.mozilla mark.important,
+    .blue .slide.mozilla mark.comment, .blue.debug .slide.mozilla mark.important, .blue.debug .slide.mozilla mark.comment {
+      text-shadow: inherit; }
+    .slide mark.comment, .debug .slide mark.comment, .slide.mozilla mark.comment, .debug .slide.mozilla mark.comment,
+    .red .slide.mozilla mark.comment, .red.debug .slide.mozilla mark.comment,
+    .dark .slide.mozilla mark.comment, .dark.debug .slide.mozilla mark.comment,
+    .blue .slide.mozilla mark.comment, .blue.debug .slide.mozilla mark.comment {
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+      color: #1a54b5;
+      font-style: italic; }
+    .slide mark.string, .debug .slide mark.string, .slide.mozilla mark.string, .debug .slide.mozilla mark.string,
+    .red .slide.mozilla mark.string, .red.debug .slide.mozilla mark.string,
+    .dark .slide.mozilla mark.string, .dark.debug .slide.mozilla mark.string,
+    .blue .slide.mozilla mark.string, .blue.debug .slide.mozilla mark.string {
+      padding: 0;
+      background-color: inherit;
+      color: #821;
+      text-shadow: inherit; }
+
+.blue .slide, .blue.debug .slide, .slide.blue, .debug .slide.blue,
+.red .slide.blue, .red.debug .slide.blue,
+.dark .slide.blue, .dark.debug .slide.blue {
+  background: url(../images/tab.png) 835px 0 no-repeat, url(../images/grain.png) 0 0 repeat, radial-gradient(circle, #0096db, #00539f), #0096db; }
+  .blue .slide, .blue .slide h2, .blue .slide kbd, .blue .slide code, .blue .slide samp, .blue.debug .slide, .blue.debug .slide h2, .blue.debug .slide kbd, .blue.debug .slide code, .blue.debug .slide samp, .slide.blue, .slide.blue h2, .slide.blue kbd, .slide.blue code, .slide.blue samp, .debug .slide.blue, .debug .slide.blue h2, .debug .slide.blue kbd, .debug .slide.blue code, .debug .slide.blue samp,
+  .red .slide.blue,
+  .red .slide.blue h2,
+  .red .slide.blue kbd,
+  .red .slide.blue code,
+  .red .slide.blue samp, .red.debug .slide.blue, .red.debug .slide.blue h2, .red.debug .slide.blue kbd, .red.debug .slide.blue code, .red.debug .slide.blue samp,
+  .dark .slide.blue,
+  .dark .slide.blue h2,
+  .dark .slide.blue kbd,
+  .dark .slide.blue code,
+  .dark .slide.blue samp, .dark.debug .slide.blue, .dark.debug .slide.blue h2, .dark.debug .slide.blue kbd, .dark.debug .slide.blue code, .dark.debug .slide.blue samp {
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75); }
+  .blue .slide mark, .blue.debug .slide mark, .slide.blue mark, .debug .slide.blue mark,
+  .red .slide.blue mark, .red.debug .slide.blue mark,
+  .dark .slide.blue mark, .dark.debug .slide.blue mark {
+    text-shadow: none; }
+    .blue .slide mark.important, .blue .slide mark.comment, .blue.debug .slide mark.important, .blue.debug .slide mark.comment, .slide.blue mark.important, .slide.blue mark.comment, .debug .slide.blue mark.important, .debug .slide.blue mark.comment,
+    .red .slide.blue mark.important,
+    .red .slide.blue mark.comment, .red.debug .slide.blue mark.important, .red.debug .slide.blue mark.comment,
+    .dark .slide.blue mark.important,
+    .dark .slide.blue mark.comment, .dark.debug .slide.blue mark.important, .dark.debug .slide.blue mark.comment {
+      text-shadow: inherit; }
+    .blue .slide mark.comment, .blue.debug .slide mark.comment, .slide.blue mark.comment, .debug .slide.blue mark.comment,
+    .red .slide.blue mark.comment, .red.debug .slide.blue mark.comment,
+    .dark .slide.blue mark.comment, .dark.debug .slide.blue mark.comment {
+      color: #ee9;
+      font-style: italic; }
+    .blue .slide mark.string, .blue.debug .slide mark.string, .slide.blue mark.string, .debug .slide.blue mark.string,
+    .red .slide.blue mark.string, .red.debug .slide.blue mark.string,
+    .dark .slide.blue mark.string, .dark.debug .slide.blue mark.string {
+      padding: 0;
+      background-color: inherit;
+      color: #fda;
+      text-shadow: inherit; }
+
+.red .slide, .red.debug .slide, .slide.red, .debug .slide.red,
+.dark .slide.red, .dark.debug .slide.red,
+.blue .slide.red, .blue.debug .slide.red {
+  background: url(../images/tab.png) 835px 0 no-repeat, url(../images/grain.png) 0 0 repeat, radial-gradient(circle, #ea3b28, #c13832), #ea3b28; }
+  .red .slide, .red .slide h2, .red .slide kbd, .red .slide code, .red .slide samp, .red.debug .slide, .red.debug .slide h2, .red.debug .slide kbd, .red.debug .slide code, .red.debug .slide samp, .slide.red, .slide.red h2, .slide.red kbd, .slide.red code, .slide.red samp, .debug .slide.red, .debug .slide.red h2, .debug .slide.red kbd, .debug .slide.red code, .debug .slide.red samp,
+  .dark .slide.red,
+  .dark .slide.red h2,
+  .dark .slide.red kbd,
+  .dark .slide.red code,
+  .dark .slide.red samp, .dark.debug .slide.red, .dark.debug .slide.red h2, .dark.debug .slide.red kbd, .dark.debug .slide.red code, .dark.debug .slide.red samp,
+  .blue .slide.red,
+  .blue .slide.red h2,
+  .blue .slide.red kbd,
+  .blue .slide.red code,
+  .blue .slide.red samp, .blue.debug .slide.red, .blue.debug .slide.red h2, .blue.debug .slide.red kbd, .blue.debug .slide.red code, .blue.debug .slide.red samp {
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75); }
+  .red .slide mark, .red.debug .slide mark, .slide.red mark, .debug .slide.red mark,
+  .dark .slide.red mark, .dark.debug .slide.red mark,
+  .blue .slide.red mark, .blue.debug .slide.red mark {
+    text-shadow: none; }
+    .red .slide mark.important, .red .slide mark.comment, .red.debug .slide mark.important, .red.debug .slide mark.comment, .slide.red mark.important, .slide.red mark.comment, .debug .slide.red mark.important, .debug .slide.red mark.comment,
+    .dark .slide.red mark.important,
+    .dark .slide.red mark.comment, .dark.debug .slide.red mark.important, .dark.debug .slide.red mark.comment,
+    .blue .slide.red mark.important,
+    .blue .slide.red mark.comment, .blue.debug .slide.red mark.important, .blue.debug .slide.red mark.comment {
+      text-shadow: inherit; }
+    .red .slide mark.comment, .red.debug .slide mark.comment, .slide.red mark.comment, .debug .slide.red mark.comment,
+    .dark .slide.red mark.comment, .dark.debug .slide.red mark.comment,
+    .blue .slide.red mark.comment, .blue.debug .slide.red mark.comment {
+      color: #ee9;
+      font-style: italic; }
+    .red .slide mark.string, .red.debug .slide mark.string, .slide.red mark.string, .debug .slide.red mark.string,
+    .dark .slide.red mark.string, .dark.debug .slide.red mark.string,
+    .blue .slide.red mark.string, .blue.debug .slide.red mark.string {
+      padding: 0;
+      background-color: inherit;
+      color: #fda;
+      text-shadow: inherit; }
+
+.dark .slide, .dark.debug .slide, .slide.dark, .debug .slide.dark,
+.red .slide.dark, .red.debug .slide.dark,
+.blue .slide.dark, .blue.debug .slide.dark {
+  background: url(../images/tab.png) 835px 0 no-repeat, url(../images/grain.png) 0 0 repeat, radial-gradient(circle, #6a7b86, #424f5a), #6a7b86; }
+  .dark .slide, .dark .slide h2, .dark .slide kbd, .dark .slide code, .dark .slide samp, .dark.debug .slide, .dark.debug .slide h2, .dark.debug .slide kbd, .dark.debug .slide code, .dark.debug .slide samp, .slide.dark, .slide.dark h2, .slide.dark kbd, .slide.dark code, .slide.dark samp, .debug .slide.dark, .debug .slide.dark h2, .debug .slide.dark kbd, .debug .slide.dark code, .debug .slide.dark samp,
+  .red .slide.dark,
+  .red .slide.dark h2,
+  .red .slide.dark kbd,
+  .red .slide.dark code,
+  .red .slide.dark samp, .red.debug .slide.dark, .red.debug .slide.dark h2, .red.debug .slide.dark kbd, .red.debug .slide.dark code, .red.debug .slide.dark samp,
+  .blue .slide.dark,
+  .blue .slide.dark h2,
+  .blue .slide.dark kbd,
+  .blue .slide.dark code,
+  .blue .slide.dark samp, .blue.debug .slide.dark, .blue.debug .slide.dark h2, .blue.debug .slide.dark kbd, .blue.debug .slide.dark code, .blue.debug .slide.dark samp {
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.75); }
+  .dark .slide mark, .dark.debug .slide mark, .slide.dark mark, .debug .slide.dark mark,
+  .red .slide.dark mark, .red.debug .slide.dark mark,
+  .blue .slide.dark mark, .blue.debug .slide.dark mark {
+    text-shadow: none; }
+    .dark .slide mark.important, .dark .slide mark.comment, .dark.debug .slide mark.important, .dark.debug .slide mark.comment, .slide.dark mark.important, .slide.dark mark.comment, .debug .slide.dark mark.important, .debug .slide.dark mark.comment,
+    .red .slide.dark mark.important,
+    .red .slide.dark mark.comment, .red.debug .slide.dark mark.important, .red.debug .slide.dark mark.comment,
+    .blue .slide.dark mark.important,
+    .blue .slide.dark mark.comment, .blue.debug .slide.dark mark.important, .blue.debug .slide.dark mark.comment {
+      text-shadow: inherit; }
+    .dark .slide mark.comment, .dark.debug .slide mark.comment, .slide.dark mark.comment, .debug .slide.dark mark.comment,
+    .red .slide.dark mark.comment, .red.debug .slide.dark mark.comment,
+    .blue .slide.dark mark.comment, .blue.debug .slide.dark mark.comment {
+      color: #ee9;
+      font-style: italic; }
+    .dark .slide mark.string, .dark.debug .slide mark.string, .slide.dark mark.string, .debug .slide.dark mark.string,
+    .red .slide.dark mark.string, .red.debug .slide.dark mark.string,
+    .blue .slide.dark mark.string, .blue.debug .slide.dark mark.string {
+      padding: 0;
+      background-color: inherit;
+      color: #fda;
+      text-shadow: inherit; }
+
+.slide.cover, .debug .slide.cover {
+  background: #000; }
+
+/* Deck Specific */
+.progress, .list .badge {
+  display: none; }
+
+ul, ol {
+  font-size: 48px; }
+
+.slide kbd, .slide code, .slide samp {
+  background: transparent;
+  padding: inherit;
+  border-radius: inherit; }
+
+/* Slide Specific */
+.slide.s-title h2 {
+  color: #fff;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.75);
+  font-size: 88px;
+  letter-spacing: -4px;
+  position: absolute;
+  top: 40px;
+  left: 54px; }
+.slide.s-title h3 {
+  color: #fff;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.75);
+  font-size: 42px;
+  letter-spacing: -1px;
+  position: absolute;
+  top: 100px;
+  left: 180px; }
+.slide.s-title h4 {
+  color: #fff;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.75);
+  font-size: 32px;
+  letter-spacing: -1px;
+  position: absolute;
+  bottom: 10px;
+  left: 30px; }
+
+.slide.s-rtfm h2 {
+  font-size: 360px;
+  letter-spacing: -4px;
+  font-weight: 800;
+  top: 35%; }
+.slide.s-rtfm h3 {
+  font-size: 72px;
+  letter-spacing: -2px;
+  font-weight: 300;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 20%; }
+
+.slide.s-questions h2 {
+  font-weight: 500;
+  top: 40%; }
+.slide.s-questions h3 {
+  font-size: 72px;
+  letter-spacing: -2px;
+  font-weight: 300;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%; }
+.slide.s-questions h4 {
+  font-size: 38px;
+  letter-specing: -1px;
+  position: absolute;
+  left: 0;
+  top: 89%;
+  width: 100%;
+  text-align: center; }
+
+.slide.s-watch pre.place.m {
+  top: 58%; }
+
+.slide.s-live-code.w h2 {
+  font-weight: 700;
+  color: #000; }
+.slide.s-live-code.w img {
+  top: 60%; }
+
+.slide.s-screencast video {
+  z-index: inherit; }
+
+.slide.s-credits ul, .slide.s-credits ol {
+  font-size: 38px; }
+
+.slide.s-pretribble ul {
+  text-align: center;
+  font-size: 24px; }
+  .slide.s-pretribble ul li, .slide.s-pretribble ul li.next.active {
+    display: inline;
+    margin-right: .7em; }
+    .slide.s-pretribble ul li .zocial, .slide.s-pretribble ul li.next.active .zocial {
+      margin-bottom: 1em; }
+  .slide.s-pretribble ul li:before {
+    content: inherit; }
+
+.slide.s-manifesto ol > li {
+  line-height: 1.2;
+  margin-bottom: 2em; }
+.slide.s-manifesto ol > li:first-child:before {
+  content: '2.\00A0'; }
+.slide.s-manifesto ol > li:last-child:before {
+  content: '5.\00A0'; }
+
+.slide.s-onebutton h3 {
+  font-size: 72px;
+  letter-spacing: -2px;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  margin-top: -.2em; }
